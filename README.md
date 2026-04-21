@@ -1,3 +1,10 @@
+<div align="center">
+  <picture>
+    <img alt="ZeroBack"
+         src="https://raw.githubusercontent.com/Synth1105/zeroback/master/zeroback.svg"
+         width="50%">
+  </picture>
+</div>
 # ZeroBack
 
 
