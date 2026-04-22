@@ -27,8 +27,9 @@ Important note: This program is not a library. If you are looking for a library,
 ## Installation
 
 ```bash
-cargo install --path .
+cargo install zeroback
 ```
+Binary is located at ~/.cargo/bin/zb.
 
 ## Usage
 
@@ -41,17 +42,15 @@ method = "GET"
 port = "80"
 timeout = 30
 
-[request]
-header = """
-User-Agent: ZeroBack/1.0
-Accept: application/json
-"""
+[request.header]
+User-Agent = "ZeroBack/1.0"
+Accept = "application/json"
 ```
 
 Run the tool:
 
 ```bash
-zeroback --config config.toml
+zb --config config.toml
 ```
 
 ## Configuration Format
@@ -65,13 +64,10 @@ The TOML file must contain two sections:
 - `timeout`: Request timeout in seconds (integer)
 
 ### [request]
-- `header`: Raw header string (multiline string)
+- `header`: Key = value
   - Each header on a new line
-  - Format: `Key: Value`
-  - Trailing commas are ignored
-  - Empty lines are skipped
-- `body`: Optional request body for POST, PUT, and PATCH requests (string)
-
+  - Format: `Key = "Value"`
+- `body`: Optional request body for POST, PUT, and PATCH requests 
 ## Examples
 
 ### GET Request
@@ -83,11 +79,9 @@ method = "GET"
 port = "80"
 timeout = 10
 
-[request]
-header = """
-User-Agent: TestClient
-Accept: */*
-"""
+[request.header]
+User-Agent = "TestClient"
+Accept = "*/*"
 ```
 
 ### POST Request with JSON Body
@@ -99,12 +93,12 @@ method = "POST"
 port = "80"
 timeout = 10
 
-[request]
-header = """
-Content-Type: application/json
-Authorization: Bearer token123
-"""
-body = """{"key": "value", "message": "hello world"}"""
+[request.header]
+User-Agent = "ZeroBack/1.0"
+Accept = "application/json"
+[request.body]
+asdf = "jkl"
+foo = "bar"
 ```
 
 ## Building from Source
