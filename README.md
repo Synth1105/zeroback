@@ -109,7 +109,7 @@ cd zeroback
 cargo build --release
 ```
 
-The binary will be available at `target/release/zeroback`.
+The binary will be available at `target/release/zb`.
 
 ## License
 
