@@ -22,7 +22,7 @@ A simple HTTP client tool for sending requests with custom headers, configured v
 - Timeout configuration
 - Response status, headers, and body output
 
-**IMPORTANT MESSAGE: THIS PROJECT IS NOT LIBRARY. IF YOU WANT THIS TO LIBRARY, CHECK libzeroback**
+Important note: This program is not a library. If you are looking for a library, please try searching for libzeroback.
 
 ## Installation
 
